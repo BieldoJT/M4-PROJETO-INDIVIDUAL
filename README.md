@@ -18,4 +18,4 @@ Projeto do modulo 4 com o objetivo de criar a modelagem de um banco de dados.
 
 <h3>Imagem Modelagem</h3>
 <br>
-       <img src="/Modelo_Banco.png" width="800px">
+       <img src="/Sistema Resilia.png" width="800px">
