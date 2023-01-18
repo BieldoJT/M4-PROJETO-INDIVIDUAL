@@ -8,12 +8,12 @@ CREATE TABLE `cursos` (
 
 CREATE TABLE `turmas` (
   `id_turma` int PRIMARY KEY,
-  `id_aluno` int,
   `id_professor` int
 );
 
 CREATE TABLE `alunos` (
   `id_aluno` int PRIMARY KEY,
+  `id_turma` int,
   `nome_aluno` varchar(255),
   `cpf_aluno` int,
   `endereco_aluno` varchar(255),
@@ -80,7 +80,7 @@ ALTER TABLE `tabela_de_presensa` ADD FOREIGN KEY (`data_aula`) REFERENCES `aula`
 
 ALTER TABLE `tabela_de_presensa` ADD FOREIGN KEY (`id_aluno`) REFERENCES `alunos` (`id_aluno`);
 
-ALTER TABLE `turmas` ADD FOREIGN KEY (`id_aluno`) REFERENCES `alunos` (`id_aluno`);
+ALTER TABLE `alunos` ADD FOREIGN KEY (`id_turma`) REFERENCES `turmas` (`id_turma`);
 
 ALTER TABLE `turmas` ADD FOREIGN KEY (`id_professor`) REFERENCES `professores` (`id_professor`);
 
